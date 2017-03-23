@@ -19,6 +19,7 @@ Bank.prototype = {
 
   largestAccount: function(){
     var largest = this.accounts[0];
+
     for(var account of this.accounts){
       if(account.balance > largest.balance){
         largest = account;
@@ -29,9 +30,9 @@ Bank.prototype = {
 
   totalHeld: function(){
     var total = 0;
-    for(var account of this.accounts){
+    this.accounts.forEach(function(account){
       total += account.balance;
-    }
+    })
     return total;
   },
 

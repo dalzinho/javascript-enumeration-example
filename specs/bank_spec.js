@@ -30,7 +30,6 @@ describe ('bank', function(){
   });
 
   it('can find account by owner name', function(){
-    bank.addAccount(account1);
     assert.equal(account1, bank.findByName("John"));
   });
 
