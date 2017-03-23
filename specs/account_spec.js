@@ -4,7 +4,7 @@ var account1;
 
 describe('account', function(){
   beforeEach(function(){
-    account1 = new Account("John");
+    account1 = new Account("John", 'personal');
   });
 
   it('should have an owner name', function(){
@@ -25,5 +25,9 @@ describe('account', function(){
     account1.withdraw(50);
     assert.equal(50, account1.balance);
   });
+
+  it('has an account type', function(){
+    assert.equal('personal', account1.type)
+  })
 
 })

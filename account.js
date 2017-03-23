@@ -1,5 +1,6 @@
-var Account = function(ownerName){
+var Account = function(ownerName, type){
   this.ownerName = ownerName;
+  this.type = type;
   this.balance = 0;
 };
 
