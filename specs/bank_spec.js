@@ -36,6 +36,7 @@ describe ('bank', function(){
 
   it('can return the account by largest value', function(){
     assert.equal(account1, bank.largestAccount())
+    assert.equal(account1, bank.findAccount(bank.largest));
   });
 
   it('can return the total value of all accounts held', function(){

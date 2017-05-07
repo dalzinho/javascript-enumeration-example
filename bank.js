@@ -7,6 +7,13 @@ Bank.prototype = {
     this.accounts.push(account);
   },
 
+  largest: function(account){
+    if(account.balance > target.balance){
+      target = account;
+    }
+  },
+
+
   findByName: function(searchName){
     for (var account of this.accounts){
 
@@ -15,6 +22,15 @@ Bank.prototype = {
       }
     }
   },
+
+
+  findAccount: function(callback){
+    var target = this.accounts[0];
+    this.accounts.forEach(function(account){
+      callback(account);
+    });
+  },
+
 
 
   largestAccount: function(){
